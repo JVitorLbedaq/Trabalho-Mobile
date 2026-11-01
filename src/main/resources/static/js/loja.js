@@ -61,7 +61,7 @@ function adicionarAoCarrinho(id, titulo, preco, lojaId, imagem) {
             "Seu carrinho contém produtos de outra loja. Deseja esvaziar o carrinho atual e adicionar este novo produto?",
             "Sim, Esvaziar e Adicionar",
             () => {
-                carrinho = []; // Limpa o carrinho velho
+                carrinho = []; 
                 processarAdicaoItem(carrinho, id, titulo, preco, lojaId, imagem);
             }
         );
@@ -70,7 +70,6 @@ function adicionarAoCarrinho(id, titulo, preco, lojaId, imagem) {
     }
 }
 
-// Função auxiliar para não repetir código
 function processarAdicaoItem(carrinho, id, titulo, preco, lojaId, imagem) {
     let itemExistente = carrinho.find(item => item.id === id);
     if (itemExistente) {

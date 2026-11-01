@@ -19,10 +19,10 @@ public class Loja {
     private String nome;
 
     @Column(nullable = false)
-    private Long vendedorId; // ID do Usuário (ROLE_ADMIN) dono da loja
+    private Long vendedorId; 
 
     @Column(nullable = false)
-    private Integer numeroPedidoAtual = 0; // Contador para gerar o número único do pedido
+    private Integer numeroPedidoAtual = 0;
 
     public Loja() {}
 

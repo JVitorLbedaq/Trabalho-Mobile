@@ -7,7 +7,6 @@ if (!token || localStorage.getItem('market_role') !== 'ROLE_ADMIN') {
     window.location.href = 'index.html';
 }
 
-// A lógica do botão 'Sair' foi removida daqui, pois o navbar.js já faz isso!
 
 async function carregarLojaDoVendedor() {
     try {

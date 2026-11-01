@@ -91,7 +91,7 @@ function abrirModalEdicao(id) {
     document.getElementById('edit-preco').value = produto.preco;
     document.getElementById('edit-quantidade').value = produto.quantidadeDisponivel;
     document.getElementById('edit-descricao').value = produto.descricao;
-    document.getElementById('edit-foto').value = ''; // Garante que começa vazio
+    document.getElementById('edit-foto').value = '';
     
     document.getElementById('modal-editar-produto').style.display = 'flex';
 }
