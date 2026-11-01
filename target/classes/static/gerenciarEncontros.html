@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Locais de Encontro - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-loja">
+        <section class="card-login" style="max-width: 100%;">
+            <h2>Cadastrar Local de Entrega</h2>
+            <form id="form-encontro">
+                <label class="label-form">Nome do Local (Ex: Bloco C, Biblioteca):</label>
+                <input type="text" id="nome-local" class="campo-form" required>
+                
+                <label class="label-form">Detalhes (Ex: Nos intervalos das 20h):</label>
+                <input type="text" id="detalhes-local" class="campo-form">
+                
+                <button type="submit" class="btn-padrao">Salvar Local</button>
+            </form>
+        </section>
+
+        <section style="margin-top: 2rem;">
+            <h3>Meus Locais de Entrega</h3>
+            <ul id="lista-encontros" style="list-style: none; padding: 0;"></ul>
+        </section>
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/gerenciarEncontros.js"></script>
+</body>
+</html>

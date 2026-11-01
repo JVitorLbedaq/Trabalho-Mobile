@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-centralizado">
+        <section class="card-login" aria-labelledby="titulo-perfil">
+            <h2 id="titulo-perfil">Meu Perfil</h2>
+            <form id="form-perfil">
+                <label for="nome-perfil" class="label-form">Novo Nome:</label>
+                <input type="text" id="nome-perfil" class="campo-form" required>
+
+                <label for="senha-perfil" class="label-form">Nova Senha:</label>
+                <input type="password" id="senha-perfil" class="campo-form" required>
+
+                <button type="submit" class="btn-padrao">Atualizar Dados</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

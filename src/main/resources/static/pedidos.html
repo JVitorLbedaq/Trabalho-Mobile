@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-loja">
+        <section aria-labelledby="titulo-pedidos">
+            <h2 id="titulo-pedidos">Meus Pedidos Recentes</h2>
+            <div id="lista-pedidos" class="grid-produtos" role="list">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

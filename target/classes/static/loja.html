@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadarVendar - Loja </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-loja" class="container-loja">
+        <section class="cabecalho-loja" aria-labelledby="nome-loja">
+            <h2 id="nome-loja"></h2>
+            <button id="btn-editar-loja" class="btn-padrao" style="display: none;" aria-label="Gerenciar Loja">Gerenciar Loja</button>
+        </section>
+
+        <section aria-labelledby="titulo-produtos-loja">
+            <h3 id="titulo-produtos-loja">Produtos desta Loja</h3>
+            <div id="vitrine-loja" class="grid-produtos" role="list">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/loja.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

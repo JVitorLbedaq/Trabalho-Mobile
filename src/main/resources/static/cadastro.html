@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-centralizado">
+        <section class="card-login" aria-labelledby="titulo-cadastro">
+            <h2 id="titulo-cadastro">Crie sua conta</h2>
+            
+            <form id="form-cadastro">
+                <label class="label-form" for="nome">Nome Completo:</label>
+                <input type="text" id="nome" class="campo-form" required aria-required="true">
+
+                <label class="label-form" for="celular">Celular (Será seu login):</label>
+                <input type="text" id="celular" class="campo-form" placeholder="Ex: 5511999999999" required aria-required="true">
+
+                <label class="label-form" for="senha">Senha:</label>
+                <input type="password" id="senha" class="campo-form" required aria-required="true">
+
+                <label class="label-form" for="tipo-conta">O que você deseja fazer?</label>
+                <select id="tipo-conta" class="campo-form" required aria-required="true">
+                    <option value="ROLE_USER">Quero apenas comprar (Visitante)</option>
+                    <option value="ROLE_ADMIN">Quero vender produtos (Vendedor)</option>
+                </select>
+
+                <button type="submit" class="btn-padrao" aria-label="Criar nova conta">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/mascara.js"></script>
+    <script src="js/cadastro.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

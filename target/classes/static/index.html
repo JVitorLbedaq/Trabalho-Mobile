@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal" class="container-loja">
+        
+        <section class="barra-busca-container">
+            <input type="text" id="campo-busca" class="campo-form" style="max-width: 400px; margin: 0;" placeholder="Buscar produtos..." aria-label="Pesquisar produtos">
+            
+            <select id="filtro-categoria" class="campo-form" style="max-width: 250px; margin: 0;" aria-label="Filtrar por categoria">
+                <option value="">Todas as Categorias</option>
+                <option value="Doces">Doces</option>
+                <option value="Salgados">Salgados</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Acessório">Acessório</option>
+                <option value="Cosmético">Cosmético</option>
+                <option value="Artesanato">Artesanato</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Papelaria">Papelaria</option>
+                <option value="Saudável">Saudável</option>
+            </select>
+            
+            <button id="btn-buscar" class="btn-padrao" style="margin: 0;">Buscar</button>
+        </section>
+
+        <section class="card-login" style="max-width: 100%;" aria-labelledby="titulo-vitrine">
+            <div id="vitrine-lojas">
+            </div>
+        </section>
+        
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; color: #666;">
+        <p>&copy; 2026 RadarVendas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

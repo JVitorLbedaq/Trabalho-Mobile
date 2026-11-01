@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Loja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-loja">
+        <section class="cabecalho-loja">
+            <h2 id="nome-loja-gerenciamento"></h2>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <a href="painel.html" class="btn-secundario">Adicionar Produto</a>
+                <a href="gerenciarEncontros.html" class="btn-secundario">Locais de Encontro</a>
+                <a id="link-ver-loja" href="#" class="btn-login">Ver Página Pública</a>
+            </div>
+        </section>
+
+        <section class="card-login" style="max-width: 100%; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-end;">
+            <div style="flex-grow: 1;">
+                <label class="label-form" for="novo-nome-loja">Renomear Loja:</label>
+                <input type="text" id="novo-nome-loja" class="campo-form" style="margin: 0;" placeholder="Novo nome da loja">
+            </div>
+            <button id="btn-renomear-loja" class="btn-padrao" style="margin: 0; height: fit-content;">Salvar Nome</button>
+        </section>
+        <section aria-labelledby="titulo-gerenciar-produtos">
+            <h3 id="titulo-gerenciar-produtos">Meus Produtos Cadastrados</h3>
+            <div id="lista-produtos-gerenciamento" class="grid-produtos" role="list">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/auth-guard.js"></script>
+    <script src="js/gerenciarLoja.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

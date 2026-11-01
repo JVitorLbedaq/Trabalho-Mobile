@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-loja">
+        <section class="card-login" style="max-width: 100%;">
+            <h2>Meu Carrinho de Compras</h2>
+            <div id="itens-carrinho"></div>
+            
+            <div class="carrinho-resumo">
+                <h3>Total: R$ <span id="total-carrinho">0.00</span></h3>
+                
+                <label class="label-form label-encontro">Onde deseja encontrar o vendedor?</label>
+                <select id="select-encontros" class="campo-form">
+                    <option value="A combinar">A combinar com o vendedor</option>
+                </select>
+
+                <div class="carrinho-acoes">
+                    <button onclick="limparCarrinho()" class="btn-perigo btn-esvaziar">Esvaziar Carrinho</button>
+                    <button onclick="finalizarPedidoWhatsApp()" class="btn-padrao btn-whatsapp">Finalizar via WhatsApp</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/carrinho.js"></script>
+</body>
+</html>

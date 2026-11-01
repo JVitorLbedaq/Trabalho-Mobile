@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomear Loja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-centralizado">
+        <section class="card-login" aria-labelledby="titulo-criar-loja">
+            <h2 id="titulo-criar-loja">Configure sua Loja</h2>
+            
+            <form id="form-criar-loja">
+                <label for="nome-loja" class="label-form">Nome da Loja:</label>
+                <input type="text" id="nome-loja" class="campo-form" placeholder="" required aria-required="true">
+
+                <button type="submit" class="btn-padrao" aria-label="Criar nova loja">Criar Loja</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/auth-guard.js"></script>
+    <script src="js/criaLoja.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-login" class="container-centralizado">
+        <section class="card-login" aria-labelledby="titulo-login">
+            <h2 id="titulo-login">Acesse sua conta</h2>
+            
+            <form id="form-login">
+                <label for="celular" class="label-form">Celular (Seu Usuário):</label>
+                <input type="text" id="celular" class="campo-form" placeholder="Ex: 11999999999" required aria-required="true">
+
+                <label for="senha" class="label-form">Senha:</label>
+                <input type="password" id="senha" class="campo-form" required aria-required="true">
+
+                <button type="submit" id="botaoEntrar" class="btn-padrao" aria-label="Fazer login">Entrar</button>
+            </form>
+            <p id="mensagem-erro" class="erro" aria-live="polite"></p>
+            <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #e9ecef; padding-top: 1.5rem;">
+                <p style="margin-bottom: 0.5rem; color: #555;">Ainda não tem uma conta?</p>
+                <a href="cadastro.html" class="btn-secundario" style="width: 100%;">Criar Conta Agora</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/mascara.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

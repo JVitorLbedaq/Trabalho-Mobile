@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Vendedor - RadarVendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">RadarVendas</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+        <nav class="navbar-menu" id="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="perfil.html" id="nav-perfil" style="display: none;"></a>
+            <a href="#" id="nav-dinamico" style="display: none;"></a>
+            <a href="login.html" id="nav-auth">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container-loja">
+        <section class="card-login" style="max-width: 100%;" aria-labelledby="titulo-cadastro">
+            <h2 id="titulo-cadastro" style="margin-bottom: 1rem;">Cadastrar Novo Produto</h2>
+            <section class="cabecalho-loja">
+                <h2 style="margin: 0;">Painel de Controle</h2>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <a href="gerenciarLoja.html" class="btn-secundario">Gerenciar Meus Produtos</a>
+                </div>
+            </section>
+            <form id="form-produto">
+                <label for="titulo" class="label-form">Título do Produto:</label>
+                <input type="text" id="titulo" class="campo-form" required aria-required="true">
+                <label for="categoria" class="label-form">Categoria:</label>
+                <select id="categoria" class="campo-form" required aria-required="true">
+                <option value="Doces">Doces</option>
+                <option value="Salgados">Salgados</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Acessório">Acessório</option>
+                <option value="Cosmético">Cosmético</option>
+                <option value="Artesanato">Artesanato</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Papelaria">Papelaria</option>
+                <option value="Saudável">Saudável</option>
+                </select>
+
+                <label for="preco" class="label-form">Preço (R$):</label>
+                <input type="number" id="preco" class="campo-form" step="0.01" required aria-required="true">
+
+                <label for="quantidade" class="label-form">Estoque Atual:</label>
+                <input type="number" id="quantidade" class="campo-form" required aria-required="true">
+
+                <label for="descricao" class="label-form">Descrição:</label>
+                <textarea id="descricao" class="campo-form" required aria-required="true"></textarea>
+
+                <label for="foto" class="label-form">Foto do Produto:</label>
+                <input type="file" id="foto" class="campo-form" accept="image/*" aria-label="Fazer upload de foto do produto">
+
+                <button type="submit" class="btn-padrao" aria-label="Salvar novo produto">Cadastrar Produto</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/auth-guard.js"></script>
+    <script src="js/painel.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
