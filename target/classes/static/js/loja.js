@@ -53,6 +53,12 @@ function renderizarVitrineLoja(produtos) {
 }
 
 function adicionarAoCarrinho(id, titulo, preco, lojaId, imagem) {
+    const token = localStorage.getItem('market_token');
+    if (!token) {
+        mostrarMensagem("Você precisa estar logado para pedir", "erro");
+        return; 
+    }
+
     let carrinho = JSON.parse(localStorage.getItem('market_carrinho')) || [];
     
     if (carrinho.length > 0 && String(carrinho[0].lojaId) !== String(lojaId)) {

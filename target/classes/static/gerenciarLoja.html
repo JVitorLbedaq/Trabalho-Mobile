@@ -41,6 +41,49 @@
             </div>
         </section>
 
+        <div id="modal-editar-produto">
+            <section class="card-login" id="modal-editar">
+                <h2 style="margin-bottom: 1rem;">Editar Produto</h2>
+                <form id="form-editar-produto">
+                    <input type="hidden" id="edit-id">
+                    
+                    <label class="label-form">Título:</label>
+                    <input type="text" id="edit-titulo" class="campo-form" required>
+
+                    <label class="label-form">Categoria:</label>
+                    <select id="edit-categoria" class="campo-form" required>
+                        <option value="Doces">Doces</option>
+                        <option value="Salgados">Salgados</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Acessório">Acessório</option>
+                        <option value="Cosmético">Cosmético</option>
+                        <option value="Artesanato">Artesanato</option>
+                        <option value="Serviços">Serviços</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Papelaria">Papelaria</option>
+                        <option value="Saudável">Saudável</option>
+                    </select>
+
+                    <label class="label-form">Preço (R$):</label>
+                    <input type="number" id="edit-preco" class="campo-form" step="0.01" required>
+
+                    <label class="label-form">Estoque Atual:</label>
+                    <input type="number" id="edit-quantidade" class="campo-form" required>
+
+                    <label class="label-form">Descrição:</label>
+                    <textarea id="edit-descricao" class="campo-form" required></textarea>
+
+                    <label class="label-form">Nova Foto (Deixe em branco para manter a atual):</label>
+                    <input type="file" id="edit-foto" class="campo-form" accept="image/*">
+
+                    <div id="modal-botoes">
+                        <button type="submit" class="btn-padrao" style="flex: 1;">Salvar</button>
+                        <button type="button" onclick="fecharModalEdicao()" class="btn-perigo" style="flex: 1;">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
     </main>
 
     <script src="js/auth-guard.js"></script>

@@ -36,7 +36,7 @@ document.getElementById('form-login').addEventListener('submit', async (evento) 
                 window.location.href = 'index.html';
             }
         } else {
-            mostrarMensagem('Credenciais inválidas!');
+            mostrarMensagem('Credenciais inválidas!','erro');
         }
     } catch (erro) {
         mostrarMensagem('Erro de conexão com o servidor.','erro');

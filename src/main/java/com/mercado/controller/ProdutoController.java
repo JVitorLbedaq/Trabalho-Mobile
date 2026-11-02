@@ -44,9 +44,16 @@ public class ProdutoController {
             if (produtoAtualizado.getImagemBase64() != null && !produtoAtualizado.getImagemBase64().isEmpty()) {
                 produto.setImagemBase64(produtoAtualizado.getImagemBase64());
             }
-            
             return ResponseEntity.ok().body(repository.save(produto));
         }).orElse(ResponseEntity.notFound().build());
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
+        return repository.findById(id)
+                .map(produto -> {
+                    repository.delete(produto);
+                    return ResponseEntity.ok().<Void>build();
+                }).orElse(ResponseEntity.notFound().build());
     }
 
 

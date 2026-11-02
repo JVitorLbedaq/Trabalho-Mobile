@@ -530,3 +530,5 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
 2026-11-01 02:41:35 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2026-11-01 22:52:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

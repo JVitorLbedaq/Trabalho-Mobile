@@ -3,7 +3,6 @@ const token = localStorage.getItem('market_token');
 const idUsuarioLogado = localStorage.getItem('market_usuario_id');
 let idLojaAtual = new URLSearchParams(window.location.search).get('id');
 let produtosDaLoja = [];
-let idProdutoParaExcluir = null;
 
 async function inicializarGerenciamento() {
     if (!idLojaAtual) {
@@ -224,31 +223,7 @@ function excluirProduto(idProduto) {
     );
 }
 
-function fecharModalConfirmacao() {
-    idProdutoParaExcluir = null;
-    document.getElementById('modal-confirmacao').style.display = 'none'; 
-}
 
-document.getElementById('btn-confirmar-exclusao').addEventListener('click', async () => {
-    if (!idProdutoParaExcluir) return;
-    
-    try {
-        const resposta = await fetch(`${API_URL}/produtos/${idProdutoParaExcluir}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': token }
-        });
-        
-        if (resposta.ok) {
-            mostrarMensagem('Produto excluído com sucesso!');
-            fecharModalConfirmacao();
-            carregarProdutosDaLoja(); 
-        } else {
-            mostrarMensagem('Erro ao excluir o produto.', 'erro');
-            fecharModalConfirmacao();
-        }
-    } catch(e) {
-        mostrarMensagem('Erro de conexão.', 'erro');
-    }
-});
+
 
 inicializarGerenciamento();

@@ -93,6 +93,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         } catch (erro) {}
 
         navDinamico.style.display = 'block';
+        
+        const linkCarrinho = document.createElement('a');
+        linkCarrinho.href = 'carrinho.html';
+        linkCarrinho.textContent = 'Carrinho';
+        menu.insertBefore(linkCarrinho, navAuth);
+
         if (role === 'ROLE_ADMIN') {
             navDinamico.textContent = 'Minha Loja';
             try {
@@ -109,13 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             } catch (erro) {}
         } else {
-            navDinamico.textContent = 'Histórico';
-            navDinamico.href = 'pedidos.html';
-            
-            const linkCarrinho = document.createElement('a');
-            linkCarrinho.href = 'carrinho.html';
-            linkCarrinho.textContent = 'Lista de Pedido';
-            menu.insertBefore(linkCarrinho, navAuth);
+            navDinamico.style.display = 'none';
         }
 
         navAuth.textContent = 'Sair';
